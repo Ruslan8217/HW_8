@@ -18,7 +18,10 @@ public class Magic extends Hero {
             if (heroes[heroIndex].getHealth() > 0) {
                 heroes[heroIndex].setDamage(heroes[heroIndex].getDamage() + boost);
                 System.out.println("Magic boosted " + heroes[heroIndex].getName());
+            } else {
+
             }
+
         }
     }
 }

@@ -16,12 +16,19 @@ public class RPG_Game {
         Magic magic = new Magic("Strange", 260, 20);
         Berserk berserk = new Berserk("Heracle", 240, 15);
         Medic assistant = new Medic("Vasya", 280, 10, 5);
-        Hero[] heroes = {warrior, doc, magic, berserk, assistant};
+        Thor thor = new Thor("Thor", 280, 15);
+        Hero[] heroes = {warrior, doc, magic, berserk, assistant, thor};
 
         printStatistics(heroes, boss);
 
         while (!isGameFinished(heroes, boss)) {
             round(heroes, boss);
+            warrior.setDamage(10);
+            doc.setDamage(5);
+            magic.setDamage(20);
+            berserk.setDamage(15);
+            assistant.setDamage(10);
+            thor.setDamage(15);
         }
     }
 
